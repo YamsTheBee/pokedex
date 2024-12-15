@@ -1,21 +1,16 @@
+type PokemonProps = {
+	pokemon: { name: string; imgScr?: string };
+};
 
-function PokemonCard(props: { pokemon: { name: string; imgScr?: string } }) {
-	// ceci permet d'afficher l'objet props dans la console
-	console.log(props);
-	const pokemon = props.pokemon; // Accèder au Pokémon via props
-
+const PokemonCard: React.FC<PokemonProps> = ({ pokemon }) => {
 	return (
-		<div className="pokemonCard">
-			<figure>
-				{pokemon.imgScr ? (
-					<img src={pokemon.imgScr} alt={pokemon.name} />
-				) : (
-					<p>??? </p>
-				)}
-				<figcaption> {pokemon.name} </figcaption>
-			</figure>
+		<div>
+			<h2>{pokemon.name}</h2>
+			{pokemon.imgScr && <img src={pokemon.imgScr} alt={pokemon.name} />}
 		</div>
 	);
-}
+};
 
 export default PokemonCard;
+// const pokemon = { name: "mew", imgSrc: null };
+// à nremplacer par la valeur du {0}

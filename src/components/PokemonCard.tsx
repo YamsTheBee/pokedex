@@ -1,3 +1,5 @@
+import type React from "react";
+
 type PokemonProps = {
 	pokemon: { name: string; imgScr?: string };
 };
@@ -12,5 +14,3 @@ const PokemonCard: React.FC<PokemonProps> = ({ pokemon }) => {
 };
 
 export default PokemonCard;
-// const pokemon = { name: "mew", imgSrc: null };
-// à nremplacer par la valeur du {0}

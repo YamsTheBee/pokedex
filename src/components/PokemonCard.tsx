@@ -1,16 +1,45 @@
 import type React from "react";
 
-type PokemonProps = {
-	pokemon: { name: string; imgScr?: string };
-};
+interface pokemon {
+	name: string;
+	imgSrc?: string;
+}
 
-const PokemonCard: React.FC<PokemonProps> = ({ pokemon }) => {
+interface PokemonCardProps {
+	pokemon: pokemon;
+}
+
+const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon }) => {
 	return (
-		<div>
+		<div className="pokemon-card">
+			<img
+				src={pokemon.imgSrc || "https://via.placeholder.com/150"}
+				alt={pokemon.name}
+				className="pokemon-image"
+			/>
+
 			<h2>{pokemon.name}</h2>
-			{pokemon.imgScr && <img src={pokemon.imgScr} alt={pokemon.name} />}
 		</div>
 	);
 };
 
-export default PokemonCard;
+const App = () => {
+	return (
+		<div>
+			<PokemonCard
+				pokemon={{
+					name: "Pikachu",
+					imgSrc:
+						"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+				}}
+			/>
+
+			<PokemonCard
+				pokemon={{
+					name: "Bulbasaur",
+				}}
+			/>
+		</div>
+	);
+};
+export default App;

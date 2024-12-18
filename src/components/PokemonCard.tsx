@@ -23,23 +23,4 @@ const PokemonCard: React.FC<PokemonCardProps> = ({ pokemon }) => {
 	);
 };
 
-const App = () => {
-	return (
-		<div>
-			<PokemonCard
-				pokemon={{
-					name: "Pikachu",
-					imgSrc:
-						"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
-				}}
-			/>
-
-			<PokemonCard
-				pokemon={{
-					name: "Bulbasaur",
-				}}
-			/>
-		</div>
-	);
-};
-export default App;
+export default PokemonCard;

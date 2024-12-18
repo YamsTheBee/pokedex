@@ -5,17 +5,17 @@ const App: React.FC = () => {
 	const pokemonList = [
 		{
 			name: "Bulbasaur",
-			imgScr:
+			imgSrc:
 				"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
 		},
 		{
 			name: "Charmander",
-			imgScr:
+			imgSrc:
 				"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
 		},
 		{
 			name: "Squirtle",
-			imgScr:
+			imgSrc:
 				"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
 		},
 	];
